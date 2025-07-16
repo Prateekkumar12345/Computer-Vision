@@ -1,14 +1,28 @@
-Object Detection and Skeleton Detection using YOLOv5 and OpenCV
-This project utilizes YOLOv5 for object detection and OpenCV for skeleton detection in a video stream. The script captures video frames, detects persons using the YOLOv5 model, and then attempts to detect skeletons within the detected person regions.
+# 🧍‍♂️ YOLOv5 Person Detection & Skeleton Contour Approximation
 
-Prerequisites
-Ensure you have the following libraries installed:
+This project performs **real-time object detection** using YOLOv5 to detect **persons in video frames**, and applies basic **contour-based skeleton approximation** within each detected bounding box using OpenCV.
 
-torch
-opencv-python
-numpy
+---
 
+## 📌 Features
 
-The detect_skeleton function takes a frame and a bounding box as inputs, draws the bounding box, converts the region of interest to grayscale, applies binary thresholding, finds contours, and draws skeletons.
+- 🧠 **YOLOv5** (`yolov5s`) pre-trained model from Ultralytics via PyTorch Hub
+- 🎥 Real-time or file-based video processing
+- 🔲 Person detection via bounding boxes
+- 🧬 Skeleton-like contour approximation using OpenCV on detected persons
+- 🧾 Dynamic tracking of total detected persons
+- 💻 Live visualization with OpenCV GUI
 
-This script performs real-time object detection and skeleton detection on video frames. It uses YOLOv5 for detecting persons and OpenCV for detecting skeletons within the detected person regions. The results are displayed in a window with the total count of detected persons.
+---
+
+## 📦 Dependencies
+
+Install the required packages:
+
+```bash
+pip install torch torchvision opencv-python numpy
+
+Project Structure
+├── detect_skeleton.py       # Main script
+├── video1.mp4               # Sample video (replaceable)
+├── README.md                # This documentation
